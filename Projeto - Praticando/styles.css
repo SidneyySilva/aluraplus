@@ -1,0 +1,162 @@
+:root {
+	--branco-principal: #FFFFFF;
+	--cinza-secundario: #C0C0C0;
+	--botão-azul: #167BF7;
+	--cor-de-fundo: #00030C;
+	--fonte-principal: 'Inter';
+	--botão-azul-efeito: #3c92fa;
+}
+
+body { /* body é o pai de todos e todos os filhos dele vao receber esses valores*/
+	background-color: var(--cor-de-fundo);
+	color: var(--branco-principal);
+	font-family: var(--fonte-principal);
+	font-size: 16px;
+	font-weight: 400;
+}
+
+* { /* * Pega todos os elementos do html e coloca o estilo que for determinado, mas não funciona como o root, que pega todo arquivo css.*/
+
+	margin: 0;
+	padding: 0;
+}
+
+.principal {
+	background-image: url("img/Background.png"); /* quando for uma questão decorativa usa-se o background, caso contrario usa-se o IMG no HTML */
+	background-repeat: no-repeat;
+	background-size: contain;
+	align-items: center; /* alinhar item no centro da coluna */
+	text-align: center; /* Na realidade essa funçaõ alinha texto mas nesse caso ele alinhou todo o bloco inclusive imagem, tudo que esta dentro da div. */
+}
+
+.container__caixa {
+	margin: 0 6em; /* margin cia espaço ao redor do elemento */
+}
+
+.container__titulo {
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.container__imagem {
+	margin: 1em 0 2em 0; /* margin cia espaço ao redor do elemento */
+}
+
+.container__botao {
+	background-color: var(--botão-azul);
+	border-radius: 5px;
+	padding: 1em; /* padding afasta o conteudo da borda e não um elemento do outro */
+	color: var(--branco-principal);
+	display: block;
+	text-decoration: none;
+	margin-bottom: 1em;
+}
+
+.botao_secundario {
+	background-color: transparent;
+	border: 2px solid var(--branco-principal);
+}
+
+.container {
+	height: 100vh; /* heigth = altura ele vai usar o 100% da tela por causa do vh  */
+	display: grid;
+	grid-template-columns: 50% 50%; /* nesse caso atela fica divida no meio */
+} 
+
+.secundario {
+	align-items: center;
+	margin: 0 10em;
+}
+
+.secundario__imagem {
+	width: 80%;
+}
+
+.container_aviso {
+	font-size: 12px;
+	color: var(--cinza-secundario);
+}
+
+.descricao__titulo {
+	font-weight: 700;
+	font-size: 48px;
+	color: var(--branco-principal);
+	margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+	color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+	display: inline-block;
+	margin-top: 1em;
+}
+
+.container__descricao {
+	padding: 2em;
+}
+
+.container__titulo {
+	font-size: 20px;
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.dispositivos__lista {
+	display: flex;
+	justify-content: center;
+	list-style-type: none; /* serve para tirar pontinhos que ficam ao lado das iamgens */
+	margin: 5em 0;
+}
+
+.dispositivos {
+	text-align: center;
+}
+
+.dispositivos__titulo {
+	font-size: 48px;
+	color: var(--branco-principal);
+}
+
+.lista__item {
+	font-size: 32px;
+	color: var(--branco-principal);
+}
+
+.rodape__lista {
+	display: flex; /* todos os itens ficaram na direção de linha ou seja um ao lado do outro */
+	justify-content: center; /* em seguida centralizei */
+	list-style-type: none; /* eliminar as bolinhas que aparecem ao lado de cada item */
+	margin-top: 1em; /* afastar o topo do titulo do footer */
+}
+
+.lista__link a{ /* configurar todos os links dessa lista com o seletor de classe em conjunto do elemento */
+	text-decoration: none;
+	color: var(--branco-principal);
+	margin-left: 1em;
+}
+
+.rodape__texto {
+	margin: 1em 0;
+	color: var(--cinza-secundario);
+	font-size: 14px;
+}
+
+.rodape {
+	text-align: center;
+	margin: 5em 3em;
+}
+
+.lista__link a:hover { /* com esse comando todas as opções do lista link quando o mouse passar por cima ele fica na cor azul. */
+	color: var(--botão-azul);
+}
+
+.lista__link a:active {
+	color: rgb(20, 238, 30);
+}
+
+.container__botao:hover {
+	background-color: var(--botão-azul-efeito);
+	color: var(--cor-de-fundo);
+}
